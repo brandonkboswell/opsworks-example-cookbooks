@@ -5,7 +5,7 @@ node[:deploy].each do |app_name, deploy|
     user "root"
     cwd "#{deploy[:deploy_to]}/current"
     code <<-EOH
-    php composer.phar install
+    php ./composer.phar install
     EOH
   end
 
